@@ -1,10 +1,15 @@
+import Hero from "./pages/Hero";
+import Navbar from "./components/Navbar";
+import About from "./pages/About";
+import Experiences from "./pages/Experiences";
 
 export default function App() {
   return (
     <>
-      <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-        click me
-       </button>
+      <Navbar />
+      <Hero />
+      <About />
+      <Experiences />
     </>
-  )
+  );
 }
