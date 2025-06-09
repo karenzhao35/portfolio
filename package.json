@@ -1,6 +1,6 @@
 {
   "name": "portfolio",
-  "homepage": "https://karenzhao35.github.io/portfolio",
+  "homepage": "https://www.karenzhao.org/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -18,7 +18,8 @@
     "grapheme-splitter": "^1.0.4",
     "motion": "^12.16.0",
     "react": "^19.1.0",
-    "react-dom": "^19.1.0"
+    "react-dom": "^19.1.0",
+    "react-donut-cursor": "^2.0.2"
   },
   "devDependencies": {
     "@eslint/js": "^9.25.0",
