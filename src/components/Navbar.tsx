@@ -30,7 +30,7 @@ export default function Navbar() {
 
   function returnNavbarColour() {
     if (menuOpen) {
-      return "bg-light/50 backdrop-blur-md shadow";
+      return "bg-light/80 backdrop-blur-md shadow";
     }  else if (scrolled) {
       return "bg-main-pink/30 backdrop-blur-md shadow";
     } else {
@@ -180,7 +180,7 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {menuOpen && (
-        <div className="absolute top-[100px] left-0 w-full lg:hidden z-50 bg-light/70 backdrop-blur-lg">
+        <div className="absolute top-[100px] left-0 w-full lg:hidden z-50 bg-light/80 backdrop-blur-lg">
           <ul className="flex flex-col items-center py-6 text-lg text-accent-pink poppins-bold">
             <li className="p-1">
               <a href="#about" onClick={() => setMenuOpen(false)}>
