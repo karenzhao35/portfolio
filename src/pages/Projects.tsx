@@ -63,9 +63,9 @@ export default function Projects() {
         className="rubik-header-font text-6xl rubik-header-font text-center text-accent-pink p-20 pt-10"
       />
       <div className="inline-flex mx-auto flex-row flex-wrap justify-center items-stretch px-6 lg:mx-42 gap-4">
-        {projects.map((project, index) => (
+        {projects.map((project) => (
           <div className="min-w-[280px] max-w-xs flex">
-            <Project key={index} {...project} />
+            <Project key={project.title} {...project} />
           </div>
         ))}
       </div>
