@@ -2,7 +2,7 @@ import { motion } from "motion/react";
 
 interface ExtracurricularProps {
   title: string;
-  description: string;
+  description: string[]; // Now an array of strings
   date: string;
 }
 
@@ -29,14 +29,13 @@ export default function Extracurricular({
       <div className="max-w-[700px]">
         <h1 className="text-xl poppins-bold">{title}</h1>
         <p className="text-m poppins-regular">
-          {lines.map((line, idx) => (
+          {description.map((line, idx) => (
             <span key={idx}>
               {line}
-              {idx !== lines.length - 1 && <br />}
+              {idx !== description.length - 1 && <br />}
             </span>
           ))}
         </p>
-        const lines = description.split("\n");
       </div>
     </motion.div>
   );
