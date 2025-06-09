@@ -29,13 +29,14 @@ export default function Extracurricular({
       <div className="max-w-[700px]">
         <h1 className="text-xl poppins-bold">{title}</h1>
         <p className="text-m poppins-regular">
-          {description.split("\n").map((line, idx) => (
+          {lines.map((line, idx) => (
             <span key={idx}>
               {line}
-              {idx !== description.split("\n").length - 1 && <br />}
+              {idx !== lines.length - 1 && <br />}
             </span>
           ))}
         </p>
+        const lines = description.split("\n");
       </div>
     </motion.div>
   );
