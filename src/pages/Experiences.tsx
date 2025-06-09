@@ -51,7 +51,7 @@ export default function Experiences() {
         delay={150}
         animateBy="words"
         direction="top"
-        className="rubik-header-font text-5xl md:text-6xl rubik-header-font text-center text-accent-pink p-20 pt-10"
+        className="rubik-header-font text-5xl md:text-6xl text-center text-accent-pink p-20 pt-10"
       />
       <div className="relative flex flex-col items-center">
         <motion.div
