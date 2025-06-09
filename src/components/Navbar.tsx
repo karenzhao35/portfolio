@@ -28,13 +28,19 @@ export default function Navbar() {
     setTheme((prev) => (prev === "light" ? "dark" : "light"));
   };
 
+  function returnNavbarColour(): string {
+    if (menuOpen) {
+      return "bg-light/80";
+    } else if (scrolled) {
+      return "bg-main-pink/30 backdrop-blur-md shadow";
+    } else {
+      return "bg-transparent";
+    }
+  }
+
   return (
     <nav
-      className={`fixed top-0 left-0 w-full h-[100px] z-50 transition-colors duration-300 ${
-        scrolled || menuOpen
-          ? "bg-main-pink/30 backdrop-blur-md shadow"
-          : "bg-transparent"
-      }`}
+      className={`fixed top-0 left-0 w-full h-[100px] z-50 transition-colors duration-300 ${returnNavbarColour()}`}
     >
       <div className="max-w-7xl mx-auto px-6 h-full flex items-center justify-between">
         {/* Left logo */}
@@ -172,7 +178,7 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {menuOpen && (
-        <div className="absolute top-[100px] left-0 w-full lg:hidden z-50 bg-light/70 backdrop-blur-lg">
+        <div className="absolute top-[100px] left-0 w-full lg:hidden z-50 bg-light/80">
           <ul className="flex flex-col items-center py-6 text-lg text-accent-pink poppins-bold">
             <li className="p-1">
               <a href="#about" onClick={() => setMenuOpen(false)}>

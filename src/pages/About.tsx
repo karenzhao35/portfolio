@@ -46,7 +46,7 @@ export default function About() {
               stiffness: 100,
               damping: 20,
             }}
-            className="poppins-medium text-lg text-left pt-4 space-y-4"
+            className="poppins-regular text-lg text-left pt-4 space-y-4"
           >
             <p>
               Hello! I'm Karen, happy you're here :)
