@@ -31,7 +31,7 @@ const projects = [
   {
     title: "clearspeak",
     description:
-      "Web application that summarizes PDFs to be more comprehensive for people with accessability concerns.",
+      "Web application that summarizes PDFs to be more comprehensive for people with accessibility concerns.",
     link: "https://github.com/karenzhao35/clearspeak",
     image: clearspeak,
   },
