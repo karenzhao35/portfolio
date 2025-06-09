@@ -27,7 +27,7 @@ export default function About() {
             damping: 20,
           }}
           src={me}
-          alt="rectangle squiggly"
+          alt="my profile picture"
         />
         <div className="flex flex-col items-start justify-center max-w-2xl px-2">
           <BlurText
@@ -49,14 +49,10 @@ export default function About() {
             className="poppins-medium text-lg text-left pt-4 space-y-4"
           >
             <p>
-              Hi! I'm Karen, a software developer based in the Bay Area. I love
-              building things that make life easier and more fun. When I'm not
-              coding, you can find me playing piano or biking around the city.
+              Hello! I'm Karen, happy you're here :)
             </p>
             <p>
-              Currently, I'm an intern at Lyft, where I work on backend systems
-              to improve user experience. Previously, I interned at Rivian,
-              focusing on frontend development.
+              I am a 3rd year Computer Science student at the University of British Columbia. While I am currently interning at Lyft as a Software Engineering Intern, I spend most of my time exploring the world of tech, excited by its immense potential for impact.
             </p>
           </motion.div>
         </div>
