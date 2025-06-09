@@ -7,7 +7,7 @@ export default function About() {
   return (
     <div
       id="about"
-      className="relative h-screen flex items-center justify-center text-center"
+      className="relative h-screen min-h-[1000px] flex items-center justify-center text-center"
     >
       {/* background square */}
       <img

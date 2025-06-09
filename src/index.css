@@ -1,13 +1,31 @@
 @import "tailwindcss";
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
+@theme {
+  --color-accent-pink: var(--accent-pink);
+  --color-main-pink: var(--main-pink);
+  --color-light: var(--light);
+  --color-dark: var(--dark);
+}
 
 :root {
   --light: #FFEAD7;
+  --dark: #313038;
   --accent-pink: #EE9695;
   --main-pink: #F7BDB9;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+body.dark {
+  background: #313038;
+  color: #fff;
+}
+body.bg-light {
+  background: var(--light);
+  color: #222;
 }
 
 .rubik-scribble-bold {
@@ -29,8 +47,24 @@
   font-style: normal;
 }
 
+.poppins-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
 .poppins-bold {
   font-family: "Poppins", sans-serif;
   font-weight: 700;
   font-style: normal;
+}
+
+/* Default (light mode) */
+*::-webkit-scrollbar {
+  width: 12px;
+  background: transparent;
+}
+*::-webkit-scrollbar-thumb {
+  background: var(--accent-pink);
+  border-radius: 6px;
 }
