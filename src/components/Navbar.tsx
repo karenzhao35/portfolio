@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import cartoon from "../../public/icon.svg";
+import cartoon from "../assets/filled-cartoon.svg";
 import moon from "../assets/moon.svg";
 import sun from "../assets/sun.svg";
 import { AnimatePresence, motion } from "framer-motion";
@@ -28,10 +28,10 @@ export default function Navbar() {
     setTheme((prev) => (prev === "light" ? "dark" : "light"));
   };
 
-  function returnNavbarColour(): string {
+  function returnNavbarColour() {
     if (menuOpen) {
-      return "bg-light/80";
-    } else if (scrolled) {
+      return "bg-light/50 backdrop-blur-md shadow";
+    }  else if (scrolled) {
       return "bg-main-pink/30 backdrop-blur-md shadow";
     } else {
       return "bg-transparent";
@@ -40,7 +40,9 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 w-full h-[100px] z-50 transition-colors duration-300 ${returnNavbarColour()}`}
+      className={`fixed top-0 left-0 w-full h-[100px] z-50 transition-colors duration-300 ${
+       returnNavbarColour()
+      }`}
     >
       <div className="max-w-7xl mx-auto px-6 h-full flex items-center justify-between">
         {/* Left logo */}
@@ -178,7 +180,7 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {menuOpen && (
-        <div className="absolute top-[100px] left-0 w-full lg:hidden z-50 bg-light/80">
+        <div className="absolute top-[100px] left-0 w-full lg:hidden z-50 bg-light/70 backdrop-blur-lg">
           <ul className="flex flex-col items-center py-6 text-lg text-accent-pink poppins-bold">
             <li className="p-1">
               <a href="#about" onClick={() => setMenuOpen(false)}>

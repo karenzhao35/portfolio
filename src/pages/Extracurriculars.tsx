@@ -39,7 +39,7 @@ export default function Extracurriculars() {
         delay={150}
         animateBy="words"
         direction="top"
-        className="rubik-header-font text-4xl m:text-5xl pt-16 py-4 text-accent-pink"
+        className="rubik-header-font text-4xl m:text-5xl md:text-6xl  pt-16 py-4 text-accent-pink"
       />
       {extracurriculars.map((ec, index) => (
         <Extracurricular key={index} {...ec} />

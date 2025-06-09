@@ -60,12 +60,12 @@ export default function Projects() {
         delay={150}
         animateBy="words"
         direction="top"
-        className="rubik-header-font text-4xl m:text-5xl rubik-header-font text-center text-accent-pink p-20 pt-10"
+        className="rubik-header-font text-4xl m:text-5xl md:text-6xl rubik-header-font text-center text-accent-pink p-20 pt-10"
       />
       <div className="inline-flex mx-auto flex-row flex-wrap justify-center items-stretch px-6 lg:mx-42 gap-4">
         {projects.map((project) => (
-          <div className="min-w-[200px] max-w-xs flex">
-            <Project key={project.title} {...project} />
+          <div key={project.title} className="min-w-[200px] max-w-xs flex">
+            <Project {...project} />
           </div>
         ))}
       </div>

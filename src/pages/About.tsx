@@ -7,7 +7,7 @@ export default function About() {
   return (
     <div
       id="about"
-      className="relative h-screen min-h-[1000px] flex items-center justify-center text-center"
+      className="relative h-screen min-h-[1000px] flex items-center justify-center text-center text-white"
     >
       {/* background square */}
       <img
@@ -16,7 +16,7 @@ export default function About() {
         className="absolute h-full overflow-hidden object-cover"
       />
       {/* content */}
-      <div className="flex flex-row flex-wrap justify-center items-start z-10 gap-10 text-white">
+      <div className="flex flex-row flex-wrap justify-center items-start z-10 gap-10">
         <motion.img
           initial={{ x: -300, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
