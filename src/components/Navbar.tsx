@@ -31,7 +31,9 @@ export default function Navbar() {
   return (
     <nav
       className={`fixed top-0 left-0 w-full h-[100px] z-50 transition-colors duration-300 ${
-        scrolled || menuOpen ? "bg-main-pink/30 backdrop-blur-md shadow" : "bg-transparent"
+        scrolled || menuOpen
+          ? "bg-main-pink/30 backdrop-blur-md shadow"
+          : "bg-transparent"
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 h-full flex items-center justify-between">
@@ -55,17 +57,19 @@ export default function Navbar() {
 
         {/* Desktop nav */}
         <div className="hidden lg:flex items-center text-accent-pink text-xl poppins-bold">
-          {["about", "experiences", "extracurriculars", "projects", "contact"].map((item) => (
-            <motion.a
-              key={item}
-              href={`#${item}`}
-              whileHover={{ color: "#fff", scale: 1.08 }}
-              transition={{ type: "spring", stiffness: 300, damping: 20 }}
-              className="transition-colors duration-200 px-12"
-            >
-              {item}
-            </motion.a>
-          ))}
+          {["about", "experiences", "extracurriculars", "projects"].map(
+            (item) => (
+              <motion.a
+                key={item}
+                href={`#${item}`}
+                whileHover={{ color: "#fff", scale: 1.08 }}
+                transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                className="transition-colors duration-200 px-12"
+              >
+                {item}
+              </motion.a>
+            )
+          )}
           <motion.button
             onClick={toggleTheme}
             className="ml-4 p-2"
@@ -168,7 +172,7 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {menuOpen && (
-        <div className="absolute top-[100px] left-0 bg-main-pink/30 backdrop-blur-md shadow w-full lg:hidden z-50">
+        <div className="absolute top-[100px] left-0 w-full lg:hidden z-50 bg-light/70 backdrop-blur-lg">
           <ul className="flex flex-col items-center py-6 text-lg text-accent-pink poppins-bold">
             <li className="p-1">
               <a href="#about" onClick={() => setMenuOpen(false)}>
@@ -188,11 +192,6 @@ export default function Navbar() {
             <li className="p-1">
               <a href="#projects" onClick={() => setMenuOpen(false)}>
                 projects
-              </a>
-            </li>
-            <li className="p-1">
-              <a href="#contact" onClick={() => setMenuOpen(false)}>
-                contact
               </a>
             </li>
           </ul>
