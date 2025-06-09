@@ -28,12 +28,12 @@ export default function Project({
     >
       <img src={image} alt={`${title} screenshot`} className="" />
       <div className="flex flex-row justify-between items-center px-2 pt-2">
-        <h1 className="text-xl poppins-bold">{title}</h1>
+        <h1 className="text-m m:text-xl poppins-bold">{title}</h1>
         <a href={link}>
           <img src={git} alt="GitHub icon" className="inline-block" />
         </a>
       </div>
-      <p className="text-m poppins-regular px-2 py-1">{description}</p>
+      <p className="text-sm m:text-m poppins-regular px-2 py-1">{description}</p>
     </motion.div>
   );
 }
