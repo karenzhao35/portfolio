@@ -16,17 +16,17 @@ export default function Contact() {
     />
     
     <div className="w-full max-w-md flex flex-col gap-4 mt-6">
-      <label>
+      <label htmlFor="name">
         <p className="text-white">Name</p>
-        <input className="w-full p-2 bg-white/50 rounded-xl" />
+        <input id="name" type="text" className="w-full p-2 bg-white/50 rounded-xl" />
       </label>
-      <label>
+      <label htmlFor="email">
         <p className="text-white">Email</p>
-        <input className="w-full p-2 bg-white/50 rounded-xl" />
+        <input id="email" type="email" className="w-full p-2 bg-white/50 rounded-xl" />
       </label>
-      <label>
+      <label htmlFor="message">
         <p className="text-white">Message</p>
-        <textarea className="w-full h-32 p-2 bg-white/50 rounded-xl" />
+        <textarea id="message" className="w-full h-32 p-2 bg-white/50 rounded-xl" />
       </label>
       <button className="self-start mt-2 px-6 py-2 bg-white/50 rounded-xl">
         <p className="text-accent-pink">send</p>
