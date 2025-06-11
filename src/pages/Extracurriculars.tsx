@@ -4,9 +4,9 @@ const extracurriculars = [
   {
     title: "Motion UBC - Tech Lead",
     description: [
-      "Led the development of a cross-platform recycling pickup management system for United We Can, a nonprofit with 600+ customers, using React Native, React, and a Firebase backend.",
-      "Designed and implemented RESTful APIs and optimized database schema with Firebase to efficiently manage dynamic pickup requests, driver routes, and real-time notifications.",
-      "Built a scalable CI/CD pipeline and architecture with GitHub Actions, enabling automated deployments and seamless real-time updates for drivers and customers.",
+      "Led a team of developers to design and build a scalable recycling pickup web app for United We Can (600+ customers) using Next.js and Firebase, enabling real-time request management and driver coordination.",
+      "Architected the system backend with Firebase Authentication, Firestore, and Cloud Functions, and implemented CI/CD infrastructure with GitHub Actions, including automated testing, linting, and deployment pipelines.",
+      "Mentored developers on backend integration, API design, and development standards, fostering team-wide understanding of Firebase, modern web architecture, and clean coding practices.",
     ],
     date: "NOV 2024 - PRESENT",
   },
@@ -35,11 +35,11 @@ export default function Extracurriculars() {
       id="extracurriculars"
     >
       <BlurText
-        text="volunteering"
+        text="extracurriculars"
         delay={150}
         animateBy="words"
         direction="top"
-        className="rubik-header-font text-4xl m:text-5xl md:text-6xl  pt-16 py-4 text-accent-pink"
+        className="rubik-header-font text-4xl m:text-5xl md:text-6xl pt-10 p-20 text-accent-pink"
       />
       {extracurriculars.map((ec, index) => (
         <Extracurricular key={index} {...ec} />

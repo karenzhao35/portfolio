@@ -13,8 +13,9 @@ const experiences = [
 		date: "May 2025 - Present",
 		icon: lyft,
 		description: [
-			"Implemented Lyft Cash features by defining Protocol Buffer schemas and integrating backend data models into mobile application architecture.",
-			"Built user interface components for payment features, creating reusable UI elements following Lyft's design system and mobile development standards.",
+			"Owned end-to-end development of Lyft Cash features within an in-house architecture inspired by Composable Architecture and Redux, integrating backend Protocol Buffers with frontend state management and UI.",
+			"Wrote detailed technical specs and collaborated cross-functionally to navigate architectural constraints, resolve data model challenges, and ensure scalable integration with existing systems.",
+			"Developed reusable UI components aligned with Lyft’s design system and authored comprehensive unit and snapshot tests to ensure code reliability and maintainability.",
 		],
 	},
 	{
