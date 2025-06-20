@@ -47,7 +47,7 @@ export default function CustomCursor() {
 
   return (
     <motion.div
-      className="fixed pointer-events-none z-[9999] mix-blend-difference"
+      className="fixed pointer-events-none z-[9999] mix-blend-difference hidden lg:block"
       animate={{
         x: mousePosition.x - 12,
         y: mousePosition.y - 12,

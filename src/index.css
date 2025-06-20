@@ -73,9 +73,11 @@ body.bg-light {
 @tailwind components;
 @tailwind utilities;
 
-/* Hide default cursor */
-* {
-  cursor: none !important;
+/* Hide default cursor on large screens */
+@media (min-width: 1024px) {
+  * {
+    cursor: none !important;
+  }
 }
 
 /* Show default cursor for touch devices */

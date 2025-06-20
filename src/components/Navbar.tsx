@@ -28,10 +28,25 @@ export default function Navbar() {
     setTheme((prev) => (prev === "light" ? "dark" : "light"));
   };
 
-  function returnNavbarColour() {
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      const offset = 100; // Account for navbar height
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
+    }
+    setMenuOpen(false);
+  };
+
+  function returnNavbarColour(): string {
     if (menuOpen) {
       return "bg-light/80 backdrop-blur-md shadow";
-    }  else if (scrolled) {
+    } else if (scrolled) {
       return "bg-main-pink/30 backdrop-blur-md shadow";
     } else {
       return "bg-transparent";
@@ -40,9 +55,7 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 w-full h-[100px] z-50 transition-colors duration-300 ${
-       returnNavbarColour()
-      }`}
+      className={`fixed top-0 left-0 w-full h-[100px] z-50 transition-colors duration-300 ${returnNavbarColour()}`}
     >
       <div className="max-w-7xl mx-auto px-6 h-full flex items-center justify-between">
         {/* Left logo */}
@@ -58,7 +71,7 @@ export default function Navbar() {
           src={cartoon}
           alt="cartoon logo"
           onClick={() => {
-            window.scrollTo(0, 0);
+            window.scrollTo({ top: 0, behavior: "smooth" });
           }}
           className="cursor-pointer h-12 w-auto block"
         />
@@ -70,6 +83,10 @@ export default function Navbar() {
               <motion.a
                 key={item}
                 href={`#${item}`}
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollToSection(item);
+                }}
                 whileHover={{ color: "#fff", scale: 1.08 }}
                 transition={{ type: "spring", stiffness: 300, damping: 20 }}
                 className="transition-colors duration-200 px-12"
@@ -182,26 +199,22 @@ export default function Navbar() {
       {menuOpen && (
         <div className="absolute top-[100px] left-0 w-full lg:hidden z-50 bg-light/80 backdrop-blur-lg">
           <ul className="flex flex-col items-center py-6 text-lg text-accent-pink poppins-bold">
-            <li className="p-1">
-              <a href="#about" onClick={() => setMenuOpen(false)}>
-                about
-              </a>
-            </li>
-            <li className="p-1">
-              <a href="#experiences" onClick={() => setMenuOpen(false)}>
-                experiences
-              </a>
-            </li>
-            <li className="p-1">
-              <a href="#extracurriculars" onClick={() => setMenuOpen(false)}>
-                extracurriculars
-              </a>
-            </li>
-            <li className="p-1">
-              <a href="#projects" onClick={() => setMenuOpen(false)}>
-                projects
-              </a>
-            </li>
+            {["about", "experiences", "extracurriculars", "projects"].map(
+              (item) => (
+                <li key={item} className="p-1">
+                  <a
+                    href={`#${item}`}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      scrollToSection(item);
+                    }}
+                    className="transition-colors duration-200 hover:text-white"
+                  >
+                    {item}
+                  </a>
+                </li>
+              )
+            )}
           </ul>
         </div>
       )}
