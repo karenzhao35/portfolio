@@ -4,9 +4,9 @@ const extracurriculars = [
   {
     title: "Motion UBC - Tech Lead",
     description: [
-      "Led a team of developers to design and build a scalable recycling pickup web app for United We Can (600+ customers) using Next.js and Firebase, enabling real-time request management and driver coordination.",
-      "Architected the system backend with Firebase Authentication, Firestore, and Cloud Functions, and implemented CI/CD infrastructure with GitHub Actions, including automated testing, linting, and deployment pipelines.",
-      "Mentored developers on backend integration, API design, and development standards, fostering team-wide understanding of Firebase, modern web architecture, and clean coding practices.",
+      "Led a team of 6 developers to design and build a scalable recycling pickup web app for United We Can (600+ customers) using Next.js and Supabase, enabling real-time request management and driver coordination.",
+      "Architected the backend using Supabase Auth, PostgreSQL, and edge functions, and set up CI/CD infrastructure with GitHub Actions, including automated testing, linting, and deployments to Firebase Hosting.",
+      "Mentored developers on API integration, Supabase queries, and clean architecture practices, improving codebase quality and accelerating team onboarding and development velocity.",
     ],
     date: "NOV 2024 - PRESENT",
   },

@@ -25,7 +25,7 @@ export default function Experience({
       </div>
       <ul className="list-disc pl-6">
         {description.map((item, index) => (
-          <li key={index} className="text-sm m:text-m poppins-regular">
+          <li key={index} className="text-m m:text-lg poppins-regular">
             {item}
           </li>
         ))}

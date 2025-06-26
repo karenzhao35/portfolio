@@ -29,6 +29,7 @@ export default function Hero() {
                 "previously @ rivian",
                 "plays piano sometimes :)",
                 "likes to bike!",
+                "learning golang",
               ],
               autoStart: true,
               loop: true,

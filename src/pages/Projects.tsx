@@ -5,6 +5,7 @@ import fitness from "../assets/fitness.svg";
 import set from "../assets/set.svg";
 import clearspeak from "../assets/clearspeak.svg";
 import lumo from "../assets/lumo.svg";
+import rizz from "../assets/rizz.svg";
 import BlurText from "../components/BlurText";
 
 const projects = [
@@ -47,6 +48,12 @@ const projects = [
     description: "A mobile application that helps users store memories to brighten up their day.",
     link: "https://github.com/karenzhao35/nwHacks2025",
     image: lumo,
+  },
+  {
+    title: "LipSyncAI",
+    description: "RizzAssist is an AI-powered, TTS-fueled, deepfake-enabled flirt assistant that generates cheesy pickup lines, voices them, and lip-syncs them to your face. Built with FastAPI, React, Wave2Lip, and Cohere.",
+    link: "https://github.com/karenzhao35/rizz-analyzer",
+    image: rizz,
   }
 ];
 export default function Projects() {
