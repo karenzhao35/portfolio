@@ -27,7 +27,7 @@ export default function Footer() {
         </a>
       </div>
       <p className="text-sm mt-4">© 2025 Karen Zhao. All rights reserved.</p>
-      <p className="text-sm">Last updated June 8th, 2025</p>
+      <p className="text-sm">Last updated August 9th, 2025</p>
     </div>
   )
 }

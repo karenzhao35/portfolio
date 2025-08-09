@@ -1,5 +1,5 @@
 import rectangle from "../assets/light-rect.svg";
-import me from "../assets/photo-me.svg";
+import me from "../assets/me.svg";
 import { motion } from "framer-motion";
 import BlurText from "../components/BlurText";
 
@@ -46,13 +46,13 @@ export default function About() {
               stiffness: 100,
               damping: 20,
             }}
-            className="poppins-regular text-lg text-left pt-4 space-y-4"
+            className="poppins-medium text-lg text-left pt-4 space-y-4"
           >
             <p>
-              Hello! I'm Karen, happy you're here :)
+              hello, i'm karen, happy you're here!!
             </p>
             <p>
-              I am a 3rd year Computer Science student at the University of British Columbia. While I am currently interning at Lyft as a Software Engineering Intern, I spend most of my time exploring the world of tech, excited by its immense potential for impact.
+              i am a 3rd year computer science student at the university of british columbia. what draws me to technology the most is it's immense accessibility, and i am passionate about leveraging it to create positive change. i'm always happy to connect with new people and gain new perspectives, so feel free to reach out anytime!
             </p>
           </motion.div>
         </div>

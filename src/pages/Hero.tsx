@@ -25,11 +25,11 @@ export default function Hero() {
             options={{
               strings: [
                 "aspiring software dev!",
-                "swe intern @ lyft",
-                "previously @ rivian",
+                "previous swe intern @ lyft",
+                "previous swe intern @ rivian",
                 "plays piano sometimes :)",
                 "likes to bike!",
-                "learning golang",
+                "big foodie ~",
               ],
               autoStart: true,
               loop: true,

@@ -19,7 +19,7 @@ export default function Experience({
         <h1 className="text-lg md:text-xl poppins-bold items-baseline leading-tight">{company}</h1>
         <p className="text-sm md:text-m text-right">{date}</p>
       </div>
-      <div className="flex flex-row justify-between items-baseline">
+      <div className="flex flex-row justify-between items-baseline pb-2">
         <p className="text-sm md:text-m poppins-medium text-left">{role}</p>
         <p className="text-sm md:text-m poppins-italic text-right">{location}</p>
       </div>

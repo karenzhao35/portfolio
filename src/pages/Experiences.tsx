@@ -11,7 +11,7 @@ const experiences = [
     role: "Software Engineer Intern",
     company: "Lyft",
     location: "Toronto, Ontario",
-    date: "May 2025 - Present",
+    date: "May 2025 - Aug 2025",
     icon: lyft,
     description: [
       "Developed Python microservices to expose new endpoints and filter backend data for upcoming payment flows, collaborating cross-functionally to ensure system alignment and scalability.",
