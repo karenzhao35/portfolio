@@ -6,9 +6,38 @@ import set from "../assets/set.svg";
 import clearspeak from "../assets/clearspeak.svg";
 import lumo from "../assets/lumo.svg";
 import rizz from "../assets/rizz.svg";
+import clickbait from "../assets/clickbait.svg"
 import BlurText from "../components/BlurText";
 
 const projects = [
+  {
+    title: "URL Clickbait",
+    description:
+      "Make URLs more palatable for tech bros. This URL modifer doesn't shorten -- it creates clickbait. Built with Go, React, Vite, and PostegresSQL.",
+    link: "https://github.com/karenzhao35/url-clickbait",
+    image: clickbait,
+    website: "https://url-clickbait.onrender.com",
+  },
+  {
+    title: "LipSyncAI",
+    description:
+      "LipSyncAI is an AI-powered, TTS-fueled, deepfake-enabled flirt assistant that generates cheesy pickup lines, voices them, and lip-syncs them to your face. Built with FastAPI, React, Wave2Lip, and Cohere.",
+    link: "https://github.com/karenzhao35/rizz-analyzer",
+    image: rizz,
+  },
+  {
+    title: "set",
+    description: "Single player set game implemented using Swift for iOS.",
+    link: "https://github.com/karenzhao35/set",
+    image: set,
+  },
+  {
+    title: "your fitness buddy",
+    description:
+      "Java desktop application with JSON data persistence and end-to-end JUnit tests for tracking workouts and meals.",
+    link: "https://github.com/karenzhao35/Your-Fitness-Buddy",
+    image: fitness,
+  },
   {
     title: "ark'trek",
     description:
@@ -24,12 +53,6 @@ const projects = [
     image: flashdash,
   },
   {
-    title: "set",
-    description: "Single player set game implemented using Swift for iOS.",
-    link: "https://github.com/karenzhao35/set",
-    image: set,
-  },
-  {
     title: "clearspeak",
     description:
       "Web application that summarizes PDFs to be more comprehensive for people with accessibility concerns.",
@@ -37,24 +60,12 @@ const projects = [
     image: clearspeak,
   },
   {
-    title: "your fitness buddy",
-    description:
-      "Java desktop application with JSON data persistence and end-to-end JUnit tests for tracking workouts and meals.",
-    link: "https://github.com/karenzhao35/Your-Fitness-Buddy",
-    image: fitness,
-  },
-  {
     title: "lumo",
-    description: "A mobile application that helps users store memories to brighten up their day.",
+    description:
+      "A mobile application that helps users store memories to brighten up their day.",
     link: "https://github.com/karenzhao35/nwHacks2025",
     image: lumo,
   },
-  {
-    title: "LipSyncAI",
-    description: "RizzAssist is an AI-powered, TTS-fueled, deepfake-enabled flirt assistant that generates cheesy pickup lines, voices them, and lip-syncs them to your face. Built with FastAPI, React, Wave2Lip, and Cohere.",
-    link: "https://github.com/karenzhao35/rizz-analyzer",
-    image: rizz,
-  }
 ];
 export default function Projects() {
   return (

@@ -1,11 +1,13 @@
 import git from "../assets/git.svg";
 import { motion } from "framer-motion";
+import { useState } from "react";
 
 interface ProjectProps {
   title: string;
   description: string;
   link: string;
   image: string;
+  website?: string;
 }
 
 export default function Project({
@@ -13,7 +15,10 @@ export default function Project({
   description,
   link,
   image,
+  website,
 }: ProjectProps) {
+  const [isHovering, setIsHovering] = useState(false);
+
   return (
     <motion.div
       initial={{ y: 100, opacity: 0 }}
@@ -28,7 +33,17 @@ export default function Project({
     >
       <img src={image} alt={`${title} screenshot`} className="" />
       <div className="flex flex-row justify-between items-center px-2 pt-2">
-        <h1 className="text-m m:text-xl poppins-bold">{title}</h1>
+        <div 
+          className="flex items-center cursor-pointer"
+          onMouseEnter={() => setIsHovering(true)}
+          onMouseLeave={() => setIsHovering(false)}
+          onClick={() => website && window.open(website, '_blank')}
+        >
+          <h1 className="text-m m:text-xl poppins-bold">{title}</h1>
+          {website && isHovering && (
+            <span className="ml-2 text-sm">🔗</span>
+          )}
+        </div>
         <a href={link}>
           <img src={git} alt="GitHub icon" className="inline-block" />
         </a>
