@@ -6,7 +6,7 @@
 import AnimatedLetters from "../components/AnimatedLetters";
 import TypeWriter from "typewriter-effect";
 import GraphemeSplitter from "grapheme-splitter";
-import ellipse from "../assets/ellipse.svg";
+import ellipse from "../assets/green-ellipse.svg";
 
 export default function Hero() {
   const stringSplitter = (string: string) => {
@@ -16,8 +16,8 @@ export default function Hero() {
 
   return (
     <div className="relative h-screen flex items-center justify-center text-center overflow-hidden">
-      <img src={ellipse} alt="pink ellipse" className="absolute min-w-4xl overflow-hidden" />
-      <div className="flex flex-col items-center z-10 space-y-[-10px] text-white">
+      <img src={ellipse} alt="pink ellipse" className="absolute min-w-4xl w-screen h-screen overflow-hidden" />
+      <div className="flex flex-col items-center z-10 space-y-[-10px] text-white pb-12">
         <AnimatedLetters text="karen" />
         <AnimatedLetters text="zhao" />
         <div className="poppins-bold text-2xl pt-4">

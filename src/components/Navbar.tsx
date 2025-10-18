@@ -1,20 +1,20 @@
 import { useState, useEffect } from "react";
-import cartoon from "../assets/filled-cartoon.svg";
-import moon from "../assets/moon.svg";
-import sun from "../assets/sun.svg";
-import { AnimatePresence, motion } from "framer-motion";
-import navbar from "../assets/navbar.svg";
+import cartoon from "../assets/green-icon.svg";
+// import moon from "../assets/moon.svg";
+// import sun from "../assets/sun.svg";
+import { motion } from "framer-motion";
+import navbar from "../assets/expand-green.svg";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [theme, setTheme] = useState<"light" | "dark">("light");
+  // const [theme, setTheme] = useState<"light" | "dark">("light");
 
-  useEffect(() => {
-    document.body.classList.toggle("dark", theme === "dark");
-    document.body.classList.toggle("bg-light", theme === "light");
-    document.body.classList.toggle("bg-black", theme === "dark");
-  }, [theme]);
+  // useEffect(() => {
+  //   document.body.classList.toggle("dark", theme === "dark");
+  //   document.body.classList.toggle("bg-light", theme === "light");
+  //   document.body.classList.toggle("bg-black", theme === "dark");
+  // }, [theme]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -24,9 +24,9 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const toggleTheme = () => {
-    setTheme((prev) => (prev === "light" ? "dark" : "light"));
-  };
+  // const toggleTheme = () => {
+  //   setTheme((prev) => (prev === "light" ? "dark" : "light"));
+  // };
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -43,15 +43,15 @@ export default function Navbar() {
     setMenuOpen(false);
   };
 
-  function returnNavbarColour(): string {
-    if (menuOpen) {
-      return "bg-light/80 backdrop-blur-md shadow";
-    } else if (scrolled) {
-      return "bg-main-pink/30 backdrop-blur-md shadow";
-    } else {
-      return "bg-transparent";
-    }
+function returnNavbarColour(): string {
+  if (menuOpen) {
+    return "bg-light/80 backdrop-blur-md shadow";
+  } else if (scrolled) {
+    return "bg-accent-green/30 backdrop-blur-md shadow";
+  } else {
+    return "bg-transparent"; // no blur here
   }
+}
 
   return (
     <nav
@@ -77,7 +77,7 @@ export default function Navbar() {
         />
 
         {/* Desktop nav */}
-        <div className="hidden lg:flex items-center text-accent-pink text-xl poppins-bold">
+        <div className="hidden lg:flex items-center text-accent-green text-xl poppins-bold">
           {["about", "experiences", "extracurriculars", "projects"].map(
             (item) => (
               <motion.a
@@ -95,7 +95,7 @@ export default function Navbar() {
               </motion.a>
             )
           )}
-          <motion.button
+          {/* <motion.button
             onClick={toggleTheme}
             className="ml-4 p-2"
             aria-label="Toggle theme"
@@ -130,12 +130,12 @@ export default function Navbar() {
                 />
               )}
             </AnimatePresence>
-          </motion.button>
+          </motion.button> */}
         </div>
 
         {/* Mobile nav toggle */}
         <div className="flex lg:hidden items-center space-x-4">
-          <motion.button
+          {/* <motion.button
             onClick={toggleTheme}
             className="p-2"
             aria-label="Toggle theme"
@@ -170,7 +170,7 @@ export default function Navbar() {
                 />
               )}
             </AnimatePresence>
-          </motion.button>
+          </motion.button> */}
           <motion.button
             onClick={() => setMenuOpen((open) => !open)}
             className="p-2"
@@ -198,7 +198,7 @@ export default function Navbar() {
       {/* Mobile menu */}
       {menuOpen && (
         <div className="absolute top-[100px] left-0 w-full lg:hidden z-50 bg-light/80 backdrop-blur-lg">
-          <ul className="flex flex-col items-center py-6 text-lg text-accent-pink poppins-bold">
+          <ul className="flex flex-col items-center py-6 text-lg text-accent-green poppins-bold">
             {["about", "experiences", "extracurriculars", "projects"].map(
               (item) => (
                 <li key={item} className="p-1">

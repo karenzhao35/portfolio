@@ -29,7 +29,7 @@ export default function Project({
         stiffness: 100,
         damping: 20,
       }}
-      className="flex flex-col bg-main-pink text-white rounded-xl p-2 max-w-[300px]"
+      className="flex flex-col bg-main-green text-white rounded-xl p-2 max-w-[300px]"
     >
       <img src={image} alt={`${title} screenshot`} className="" />
       <div className="flex flex-row justify-between items-center px-2 pt-2">

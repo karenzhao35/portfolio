@@ -21,9 +21,9 @@ export default function Extracurricular({
         stiffness: 100,
         damping: 20,
       }}
-      className="flex flex-wrap flex-row text-accent-pink p-6 overflow-hidden rounded-xl"
+      className="flex flex-wrap flex-row text-main-green p-6 overflow-hidden rounded-xl"
     >
-      <div className="text-m poppins-medium text-left min-w-max mr-16">
+      <div className="text-m poppins-medium text-left min-w-max mr-16 justify-center">
         {date}
       </div>
       <div className="max-w-[700px]">
