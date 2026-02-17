@@ -198,7 +198,7 @@ function returnNavbarColour(): string {
       {/* Mobile menu */}
       {menuOpen && (
         <div className="absolute top-[100px] left-0 w-full lg:hidden z-50 bg-light/80 backdrop-blur-lg">
-          <ul className="flex flex-col items-center py-6 text-lg text-accent-green poppins-bold">
+          <ul className="flex flex-col items-center py-6 text-lg text-main-green poppins-bold">
             {["about", "experiences", "extracurriculars", "projects"].map(
               (item) => (
                 <li key={item} className="p-1">

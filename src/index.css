@@ -4,7 +4,7 @@
 @theme {
   --color-accent-pink: var(--accent-pink);
   --color-main-pink: var(--main-pink);
-  --color-accent-green: var(--accent-green);
+  --color-main-green: var(--main-green);
   --color-main-green: var(--main-green);
   --color-light: var(--light);
   --color-dark: var(--dark);
@@ -14,7 +14,7 @@
   --light: #FFFCE1;
   --dark: #313038;
   --accent-pink: #EE9695;
-  --accent-green: #3B3B3B;
+  --main-green: #3B3B3B;
   --main-pink: #F7BDB9;
   --main-green: #3C4C27;
   font-synthesis: none;
@@ -69,7 +69,7 @@ body.bg-light {
   background: transparent;
 }
 *::-webkit-scrollbar-thumb {
-  background: var(--accent-green);
+  background: var(--main-green);
   border-radius: 6px;
 }
 

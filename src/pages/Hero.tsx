@@ -17,7 +17,7 @@ export default function Hero() {
   return (
     <div className="relative h-screen flex items-center justify-center text-center overflow-hidden">
       <img src={ellipse} alt="pink ellipse" className="absolute min-w-4xl w-screen h-screen overflow-hidden" />
-      <div className="flex flex-col items-center z-10 space-y-[-10px] text-white pb-12">
+      <div className="flex flex-col items-center z-10 space-y-[-10px] text-main-green pb-12">
         <AnimatedLetters text="karen" />
         <AnimatedLetters text="zhao" />
         <div className="poppins-bold text-2xl pt-4">

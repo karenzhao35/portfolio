@@ -70,7 +70,7 @@ export default function Experiences() {
         delay={150}
         animateBy="words"
         direction="top"
-        className="rubik-header-font text-4xl m:text-5xl md:text-6xl text-center text-accent-green p-20 pt-10"
+        className="rubik-header-font text-4xl m:text-5xl md:text-6xl text-center text-main-green p-20 pt-10"
       />
       <div className="relative flex flex-col items-center w-full">
         {/* Timeline bar - hidden on small screens */}
