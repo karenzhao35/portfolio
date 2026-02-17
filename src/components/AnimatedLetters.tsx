@@ -9,7 +9,7 @@ const AnimatedLetters = ({ text }: { text: string }) => {
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}
           whileHover={{ scale: 1.2 }}
-          transition={{ duration: 0.4, type: "easeOut" }}
+          transition={{ duration: 0.4 }}
           className="inline-block"
         >
           {char}
