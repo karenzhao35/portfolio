@@ -14,9 +14,9 @@ const experiences = [
     date: "May 2025 - Aug 2025",
     icon: lyft,
     description: [
-      "Developed Python microservices to expose new endpoints and filter backend data for upcoming payment flows, collaborating cross-functionally to ensure system alignment and scalability.",
-      "Enhanced Lyft’s internal AI-powered code generation agent by adding image input support for snapshot test verification, enabling smarter, test-aware unit test suggestions using AWS Bedrock and OpenAI APIs.",
-      "Owned end-to-end development of Lyft Cash features within an in-house architecture inspired by Composable Architecture and Redux, integrating backend Protocol Buffers with frontend state management and UI.",
+      "Extended distributed payment infrastructure by expanding Python microservices and exposing paginated endpoints via Envoy, successfully navigating legacy codebase constraints to reduce server payload overhead.",
+      "Architected cross-platform data contracts using Protocol Buffers to implement expirable reward logic, exposing backend states to enable critical adoption of Lyft's Business Travel Program.",
+      "Accelerated engineering velocity by enhancing the Python-based internal AI agent with automated snapshot test verification, creating UI-aware unit test suggestions and reducing manual development effort by 30%.",
       "Wrote detailed technical specs and collaborated cross-functionally to navigate architectural constraints, resolve data model challenges, and ensure scalable integration with existing systems.",
     ],
   },
