@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import cartoon from "../assets/green-icon.svg";
+import cartoon from "../assets/jia.svg";
 // import moon from "../assets/moon.svg";
 // import sun from "../assets/sun.svg";
 import { motion } from "framer-motion";
@@ -47,7 +47,7 @@ function returnNavbarColour(): string {
   if (menuOpen) {
     return "bg-light/80 backdrop-blur-md shadow";
   } else if (scrolled) {
-    return "bg-accent-green/30 backdrop-blur-md shadow";
+    return "bg-light/30 backdrop-blur-md shadow";
   } else {
     return "bg-transparent"; // no blur here
   }
@@ -77,7 +77,7 @@ function returnNavbarColour(): string {
         />
 
         {/* Desktop nav */}
-        <div className="hidden lg:flex items-center text-accent-green text-xl poppins-bold">
+        <div className="hidden lg:flex items-center text-main-green text-xl poppins-bold">
           {["about", "experiences", "extracurriculars", "projects"].map(
             (item) => (
               <motion.a
@@ -87,7 +87,7 @@ function returnNavbarColour(): string {
                   e.preventDefault();
                   scrollToSection(item);
                 }}
-                whileHover={{ color: "#fff", scale: 1.08 }}
+                whileHover={{ color: "#A5C37E", scale: 1.08 }}
                 transition={{ type: "spring", stiffness: 300, damping: 20 }}
                 className="transition-colors duration-200 px-12"
               >

@@ -11,12 +11,12 @@
 }
 
 :root {
-  --light: #F4F9F4;
+  --light: #FFFCE1;
   --dark: #313038;
   --accent-pink: #EE9695;
-  --accent-green: #A5C37E;
+  --accent-green: #3B3B3B;
   --main-pink: #F7BDB9;
-  --main-green: #2B7C3A;
+  --main-green: #3C4C27;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;

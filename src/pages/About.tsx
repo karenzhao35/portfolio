@@ -70,7 +70,7 @@ export default function About() {
               delay={150}
               animateBy="words"
               direction="top"
-              className="rubik-header-font text-6xl pt-4 text-accent-green"
+              className="rubik-header-font text-6xl pt-4 text-light"
             />
             <motion.div
               initial={{ x: -300, opacity: 0 }}
@@ -81,7 +81,7 @@ export default function About() {
                 stiffness: 100,
                 damping: 20,
               }}
-              className="poppins-regular text-lg text-left pt-4 space-y-4"
+              className="poppins-regular text-lg text-left pt-4 space-y-4 text-light"
             >
               <p>Hello, I'm Karen, happy you're here!!</p>
               <p>
