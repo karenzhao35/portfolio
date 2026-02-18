@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 const AnimatedLetters = ({ text }: { text: string }) => {
   return (
     <h1
-      className="text-8xl rubik-scribble-bold flex"
+      className="text-8xl rubik-scribble-bold flex text-light md:text-main-green"
       style={{ WebkitTextStroke: "2px currentColor" }}
     >
       {text.split("").map((char, index) => (

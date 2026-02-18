@@ -40,7 +40,7 @@ export default function About() {
 
       <div
         id="about"
-        className="relative h-screen min-h-[1000px] flex items-center justify-center text-center text-white bg-main-green border-t-3 border-light"
+        className="relative min-h-screen flex items-center justify-center text-center text-white bg-main-green border-t-3 border-light"
       >
         {/* background square */}
         <img
