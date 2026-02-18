@@ -14,7 +14,6 @@ export default function About() {
         }
         .desktop-image {
           display: none;
-          align-self: flex-end;
         }
 
         @media (min-width: 1300px) {
@@ -23,7 +22,7 @@ export default function About() {
           }
           .desktop-image {
             display: block;
-            width: 384px; /* equivalent to lg:w-96 */
+            width: 384px;
           }
         }
 
@@ -40,7 +39,7 @@ export default function About() {
 
       <div
         id="about"
-        className="relative min-h-screen flex items-center justify-center text-center text-white bg-main-green border-t-3 border-light"
+        className="relative min-h-screen flex items-stretch justify-center text-center text-white bg-main-green border-t-3 border-light"
       >
         {/* background square */}
         <img
@@ -49,8 +48,8 @@ export default function About() {
           className="absolute -top-1 left-0 w-full h-auto object-cover"
         />
         {/* content */}
-        <div className="flex flex-row flex-wrap justify-center items-start z-10 gap-8 h-full">
-          <div className="flex flex-col items-start justify-center max-w-3xl px-4 self-center pt-10">
+        <div className="flex flex-row flex-wrap justify-center items-center min-[1150px]:items-end z-10 gap-8 min-[1150px]:min-h-screen">
+          <div className="flex flex-col items-start justify-center max-w-3xl px-4 pt-10 pb-16 min-[1150px]:self-center">
             {/* Mobile image - shows when text wraps */}
             <motion.img
               initial={{ x: -300, opacity: 0 }}
@@ -101,7 +100,7 @@ export default function About() {
 
           {/* Desktop image - shows when side by side */}
           <motion.img
-            initial={{ x: -300, opacity: 0 }}
+            initial={{ x: 300, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{
               duration: 0.5,
@@ -111,7 +110,7 @@ export default function About() {
             }}
             src={me}
             alt="my profile picture"
-            className="desktop-image self-end"
+            className="desktop-image min-[1150px]:self-end"
           />
         </div>
       </div>
