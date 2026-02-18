@@ -2,7 +2,10 @@ import { motion } from "framer-motion";
 
 const AnimatedLetters = ({ text }: { text: string }) => {
   return (
-    <h1 className="text-8xl rubik-scribble-bold flex">
+    <h1
+      className="text-8xl rubik-scribble-bold flex"
+      style={{ WebkitTextStroke: "2px currentColor" }}
+    >
       {text.split("").map((char, index) => (
         <motion.span
           key={index}

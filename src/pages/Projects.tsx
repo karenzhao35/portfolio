@@ -6,8 +6,9 @@ import set from "../assets/set.svg";
 import clearspeak from "../assets/clearspeak.svg";
 import lumo from "../assets/lumo.svg";
 import rizz from "../assets/rizz.svg";
-import clickbait from "../assets/clickbait.svg"
+import clickbait from "../assets/clickbait.svg";
 import BlurText from "../components/BlurText";
+import bamboo from "../assets/bamboo2.svg";
 
 const projects = [
   {
@@ -67,12 +68,22 @@ const projects = [
     image: lumo,
   },
 ];
+
 export default function Projects() {
   return (
     <div
-      className="flex flex-col items-center justify-center p-6 pt-16 lg:p-24 overflow-hidden pb-28"
+      className="relative"
       id="projects"
     >
+      <img
+        src={bamboo}
+        alt=""
+        className="absolute left-0 bottom-0 w-auto object-none object-left-bottom -z-10 pointer-events-none"
+      />
+      <div
+            className="flex flex-col items-center justify-center p-6 pt-16 lg:p-24 overflow-hidden pb-28"
+      id="projects"
+      >
       <BlurText
         text="projects"
         delay={150}
@@ -86,6 +97,7 @@ export default function Projects() {
             <Project {...project} />
           </div>
         ))}
+      </div>
       </div>
     </div>
   );
