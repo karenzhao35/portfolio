@@ -41,9 +41,9 @@ export default function Navbar() {
 
 function returnNavbarColour(): string {
   if (menuOpen) {
-    return "bg-light/80 backdrop-blur-md shadow";
+    return "bg-light/80 dark:bg-dark/80 backdrop-blur-md shadow";
   } else if (scrolled) {
-    return "bg-light/30 backdrop-blur-md shadow";
+    return "bg-light/30 dark:bg-dark/30 backdrop-blur-md shadow";
   } else {
     return "bg-transparent"; // no blur here
   }
@@ -193,8 +193,8 @@ function returnNavbarColour(): string {
 
       {/* Mobile menu */}
       {menuOpen && (
-        <div className="absolute top-[100px] left-0 w-full lg:hidden z-50 bg-light/80 backdrop-blur-lg">
-          <ul className="flex flex-col items-center py-6 text-lg text-main-green poppins-bold">
+        <div className="absolute top-[100px] left-0 w-full lg:hidden z-50 bg-light/80 dark:bg-dark/80 backdrop-blur-lg">
+          <ul className="flex flex-col items-center py-6 text-lg text-main-green dark:text-light poppins-bold">
             {["about", "experiences", "extracurriculars", "projects"].map(
               (item) => (
                 <li key={item} className="p-1">
