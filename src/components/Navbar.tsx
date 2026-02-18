@@ -1,20 +1,20 @@
 import { useState, useEffect } from "react";
 import cartoon from "../assets/jia.svg";
-// import moon from "../assets/moon.svg";
-// import sun from "../assets/sun.svg";
+import cartoonDark from "../assets/jia-dark.svg";
+import moon from "../assets/moon.svg";
+import sun from "../assets/sun.svg";
 import { motion } from "framer-motion";
 import navbar from "../assets/expand-green.svg";
+import navbarDark from "../assets/expand-dark.svg";
+
+import { AnimatePresence } from "framer-motion";
+import { useTheme } from "./ThemeContext";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  // const [theme, setTheme] = useState<"light" | "dark">("light");
 
-  // useEffect(() => {
-  //   document.body.classList.toggle("dark", theme === "dark");
-  //   document.body.classList.toggle("bg-light", theme === "light");
-  //   document.body.classList.toggle("bg-black", theme === "dark");
-  // }, [theme]);
+  const { theme, toggleTheme } = useTheme();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -23,10 +23,6 @@ export default function Navbar() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
-  // const toggleTheme = () => {
-  //   setTheme((prev) => (prev === "light" ? "dark" : "light"));
-  // };
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -68,7 +64,7 @@ function returnNavbarColour(): string {
             stiffness: 100,
             damping: 20,
           }}
-          src={cartoon}
+          src={theme === "light" ? cartoon : cartoonDark}
           alt="cartoon logo"
           onClick={() => {
             window.scrollTo({ top: 0, behavior: "smooth" });
@@ -77,7 +73,7 @@ function returnNavbarColour(): string {
         />
 
         {/* Desktop nav */}
-        <div className="hidden lg:flex items-center text-main-green text-xl poppins-bold">
+        <div className="hidden lg:flex items-center text-main-green dark:text-light text-xl poppins-bold">
           {["about", "experiences", "extracurriculars", "projects"].map(
             (item) => (
               <motion.a
@@ -95,7 +91,7 @@ function returnNavbarColour(): string {
               </motion.a>
             )
           )}
-          {/* <motion.button
+          <motion.button
             onClick={toggleTheme}
             className="ml-4 p-2"
             aria-label="Toggle theme"
@@ -130,12 +126,12 @@ function returnNavbarColour(): string {
                 />
               )}
             </AnimatePresence>
-          </motion.button> */}
+          </motion.button>
         </div>
 
         {/* Mobile nav toggle */}
         <div className="flex lg:hidden items-center space-x-4">
-          {/* <motion.button
+          <motion.button
             onClick={toggleTheme}
             className="p-2"
             aria-label="Toggle theme"
@@ -170,7 +166,7 @@ function returnNavbarColour(): string {
                 />
               )}
             </AnimatePresence>
-          </motion.button> */}
+          </motion.button>
           <motion.button
             onClick={() => setMenuOpen((open) => !open)}
             className="p-2"
@@ -187,7 +183,7 @@ function returnNavbarColour(): string {
                 stiffness: 100,
                 damping: 20,
               }}
-              src={navbar}
+              src={theme === "light" ? navbar : navbarDark}
               alt="navbar"
               whileHover={{ filter: "brightness(2)" }}
             />

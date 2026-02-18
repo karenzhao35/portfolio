@@ -1,10 +1,14 @@
 import rectangle from "../assets/rect-cut.svg";
+import rectangleDark from "../assets/rect-cut-dark.svg";
 import me from "../assets/me-2.svg";
 import me2 from "../assets/photo-me.svg";
 import { motion } from "framer-motion";
 import BlurText from "../components/BlurText";
+import { useTheme } from "../components/ThemeContext";
 
 export default function About() {
+  const { theme } = useTheme();
+
   return (
     <>
       <style>{`
@@ -43,7 +47,7 @@ export default function About() {
       >
         {/* background square */}
         <img
-          src={rectangle}
+          src={theme === "light" ? rectangle : rectangleDark}
           alt="rectangle squiggly"
           className="absolute -top-1 left-0 w-full h-auto object-cover"
         />

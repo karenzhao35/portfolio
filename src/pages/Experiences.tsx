@@ -70,7 +70,7 @@ export default function Experiences() {
         delay={150}
         animateBy="words"
         direction="top"
-        className="rubik-header-font text-4xl m:text-5xl md:text-6xl text-center text-main-green p-20 pt-10"
+        className="rubik-header-font text-4xl m:text-5xl md:text-6xl text-center text-main-green dark:text-light p-20 pt-10"
       />
       <div className="relative flex flex-col items-center w-full">
         {/* Timeline bar - hidden on small screens */}
@@ -83,7 +83,7 @@ export default function Experiences() {
             stiffness: 100,
             damping: 20,
           }}
-          className="absolute left-6 w-2 h-full bg-main-green rounded-full z-0 hidden [@media(min-width:400px)]:block"
+          className="absolute left-6 w-2 h-full dark:bg-light bg-main-green rounded-full z-0 hidden [@media(min-width:400px)]:block"
         ></motion.div>
         <div className="flex flex-col w-full z-10">
           {experiences.map((exp, idx) => (

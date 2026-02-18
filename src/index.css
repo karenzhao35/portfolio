@@ -1,9 +1,7 @@
 @import "tailwindcss";
-@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+@custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
-  --color-accent-pink: var(--accent-pink);
-  --color-main-pink: var(--main-pink);
   --color-main-green: var(--main-green);
   --color-main-green: var(--main-green);
   --color-light: var(--light);
@@ -12,10 +10,8 @@
 
 :root {
   --light: #FFFCE1;
-  --dark: #313038;
-  --accent-pink: #EE9695;
+  --dark: #292D25;
   --main-green: #3B3B3B;
-  --main-pink: #F7BDB9;
   --main-green: #3C4C27;
   font-synthesis: none;
   text-rendering: optimizeLegibility;

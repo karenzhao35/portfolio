@@ -23,7 +23,7 @@ export default function Hero() {
         alt=""
         className="absolute right-0 -bottom-10 w-auto h-[200vh] object-none object-right-bottom -z-10 pointer-events-none"
       />
-      <div className="flex flex-col items-center z-10 space-y-[-10px] text-light md:text-main-green pb-12">
+      <div className="flex flex-col items-center z-10 space-y-[-10px] text-light md:text-main-green dark:text-light pb-12">
         <AnimatedLetters text="karen" />
         <AnimatedLetters text="zhao" />
         <div className="poppins-bold text-2xl pt-4">

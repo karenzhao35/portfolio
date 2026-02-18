@@ -14,7 +14,7 @@ export default function Experience({
   description,
 }: ExperienceProps) {
   return (
-    <div className="flex flex-col border-6 border-main-green text-main-green rounded-xl p-6 leading-tight">
+    <div className="flex flex-col border-6 border-main-green dark:border-light text-main-green dark:text-light rounded-xl p-6 leading-tight">
       <div className="flex flex-row justify-between">
         <h1 className="text-lg md:text-xl poppins-bold items-baseline leading-tight">{company}</h1>
         <p className="text-sm md:text-m text-right">{date}</p>
