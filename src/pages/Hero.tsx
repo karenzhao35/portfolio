@@ -39,12 +39,18 @@ export default function Hero() {
           <TypeWriter
             options={{
               strings: [
-                "aspiring software dev!",
+                "software developer!",
                 "previous swe intern @ lyft",
                 "previous swe intern @ rivian",
-                "plays piano sometimes :)",
-                "likes to bike!",
-                "big foodie ~",
+                "plays piano sometimes (like 2 songs)",
+                "likes to draw (only in pencil)",
+                "likes to bike (trails, not mountains)",
+                "likes matcha lattes (with oat milk)",
+                "bakes sometimes (i love cookies)",
+                "loves to eat (noodles the most)",
+                "likes mechanical keyboards (linear keycaps)",
+                "types for fun (monkeytype)",
+                "likes philosophy (nietzsche rn)",
               ],
               autoStart: true,
               loop: true,
