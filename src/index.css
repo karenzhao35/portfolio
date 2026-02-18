@@ -32,6 +32,10 @@ body.bg-light {
   color: #222;
 }
 
+html, body {
+  overflow-x: hidden;
+}
+
 .rubik-scribble-bold {
   font-family: "Rubik Scribble", system-ui;
   font-weight: 700;
