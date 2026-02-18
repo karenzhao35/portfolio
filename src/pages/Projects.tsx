@@ -9,6 +9,7 @@ import rizz from "../assets/rizz.svg";
 import clickbait from "../assets/clickbait.svg";
 import BlurText from "../components/BlurText";
 import bamboo from "../assets/bamboo2.svg";
+import { motion } from "framer-motion";
 
 const projects = [
   {
@@ -71,33 +72,38 @@ const projects = [
 
 export default function Projects() {
   return (
-    <div
-      className="relative"
-      id="projects"
-    >
-      <img
+    <div className="relative" id="projects">
+      <motion.img
+        initial={{ x: -300, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        transition={{
+          duration: 0.5,
+          type: "spring",
+          stiffness: 100,
+          damping: 20,
+        }}
         src={bamboo}
-        alt=""
-        className="absolute left-0 bottom-0 w-auto object-none object-left-bottom -z-10 pointer-events-none"
+        alt="bamboo decoratioin"
+         className="absolute left-0 bottom-0 w-auto object-none object-left-bottom -z-10 pointer-events-none"
       />
       <div
-            className="flex flex-col items-center justify-center p-6 pt-16 lg:p-24 overflow-hidden pb-28"
-      id="projects"
+        className="flex flex-col items-center justify-center p-6 pt-16 lg:p-24 overflow-hidden pb-28"
+        id="projects"
       >
-      <BlurText
-        text="projects"
-        delay={150}
-        animateBy="words"
-        direction="top"
-        className="rubik-header-font text-4xl m:text-5xl md:text-6xl rubik-header-font text-center dark:text-light text-main-green p-20 pt-10"
-      />
-      <div className="inline-flex mx-auto flex-row flex-wrap justify-center items-stretch px-6 lg:mx-42 gap-4">
-        {projects.map((project) => (
-          <div key={project.title} className="min-w-[200px] max-w-xs flex">
-            <Project {...project} />
-          </div>
-        ))}
-      </div>
+        <BlurText
+          text="projects"
+          delay={150}
+          animateBy="words"
+          direction="top"
+          className="rubik-header-font text-4xl m:text-5xl md:text-6xl rubik-header-font text-center dark:text-light text-main-green p-20 pt-10"
+        />
+        <div className="inline-flex mx-auto flex-row flex-wrap justify-center items-stretch px-6 lg:mx-42 gap-4">
+          {projects.map((project) => (
+            <div key={project.title} className="min-w-[200px] max-w-xs flex">
+              <Project {...project} />
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
