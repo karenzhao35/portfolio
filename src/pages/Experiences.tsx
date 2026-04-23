@@ -62,11 +62,11 @@ const experiences = [
 export default function Experiences() {
   return (
     <div
-      id="experiences"
+      id="experience"
       className="flex flex-col justify-center items-center p-6 pt-16 lg:p-24 overflow-hidden"
     >
       <BlurText
-        text="experiences"
+        text="experience"
         delay={150}
         animateBy="words"
         direction="top"
